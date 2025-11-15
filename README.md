@@ -37,32 +37,31 @@ Reference:
 https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/
 
 * Import the public key.
-..bash
+<pre>
   sudo apt-get install gnupg curl
-...
-...bash
+</pre>
+<pre>
   curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
-...
+</pre>
 * Create the list file (Ubuntu 22.04(Jammy))
-...bash
+<pre>
   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
-...
+</pre>
 * Install MongoDB
-...bash
+<pre>
 sudo systemctl start mongod
 sudo systemctl enable mongod
-...
+</pre>
 * Start & Enable the Service
-...bash
+<pre>
 sudo systemctl start mongod
 sudo systemctl enable mongod
-...
+</pre>
 * Verify MongoDB Installation
-...bash
+<pre>
 sudo systemctl status mongod
 mongosh
-...
-..bash 
+</pre>
 ## 
