@@ -5,7 +5,7 @@
 * Python library: ip2location, requests, BeautifulSoup, pandas, time, concurrent.futures, pymongo, tqdm, csv, os
 
 ## 2. Folder structure:  
-```text
+<pre>
 PROJECT-05-DATA-COLLECTION-STORAGE
 │
 ├── csv files result/
@@ -22,7 +22,7 @@ PROJECT-05-DATA-COLLECTION-STORAGE
     └── retrieve_data.py # Step 6: Product name collection
 
 
-```
+</pre>
 
 ## 3. Documenting GCS Setup
 * Bucket name: project5a
@@ -33,12 +33,12 @@ PROJECT-05-DATA-COLLECTION-STORAGE
 * Encryption: Google-managed encryption keys
 * Inside the bucket, I create a raw_data folder with this structure:
 
-```text
+<pre>
 project5a/                           # GCS Bucket Name
 └── raw_data/                        # Folder for raw data storage
     ├── IP-COUNTRY-REGION-CITY.BIN   # IP Geolocation Database (Binary)
     └── glamira_ubl_oct2019_nov2019.tar.gz  # Raw data archive file (October-November 2019)
-```
+</pre>
 
 ## 4. Google Cloud VM Setup
 * Instance name	prj5vm
@@ -55,14 +55,14 @@ Reference:
 https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/
 
 * Import the public key.
-<pre>
+```text
   sudo apt-get install gnupg curl
-</pre>
-<pre>
+```
+```text
   curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
-</pre>
+```
 * Create the list file (Ubuntu 22.04(Jammy))
 <pre>
   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
