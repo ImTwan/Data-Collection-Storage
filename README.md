@@ -11,10 +11,6 @@ Goal: Build a cloud-based data foundation using GCP, MongoDB, and Python for eve
 * Encryption: Google-managed encryption keys
 * Inside the bucket, I create a raw_data folder with this structure:
 
-# 📁 **Folder Structure**
-
-The following is the folder structure for the **GCS Bucket** used in this project:
-
 ```text
 project5a/                           # GCS Bucket Name
 └── raw_data/                        # Folder for raw data storage
