@@ -111,6 +111,7 @@ Run restore:
 * Validate import
 ```text
     mongosh
+    show dbs
 ```
 Check DB + collections
 ```text
