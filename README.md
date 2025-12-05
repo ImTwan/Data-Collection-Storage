@@ -127,26 +127,26 @@ Check DB + collections
 🎉 DONE! Processed 3,239,628 unique IPs. Results saved to CSV + MongoDB collection.
 
 ## 8. Product name collection
-* Filter data from collections:
-    *`view_product_detail`
-    *`select_product_option`
-    *`select_product_option_quality`
-    *`add_to_cart_action`
-    *`product_detail_recommendation_visible`
-    *`product_detail_recommendation_noticed`
+* Filter data from collections: </br>
+    `view_product_detail` </br>
+    `select_product_option` </br>
+    `select_product_option_quality` </br>
+    `add_to_cart_action` </br>
+    `product_detail_recommendation_visible` </br>
+    `product_detail_recommendation_noticed` </br>
 
 → Retrieve `product_id` (or `viewing_product_id` if `product_id` is missing) and `current_url`
 
 * Filter data from `product_view_all_recommend_clicked` → Retrieve `viewing_product_id` and `referrer_url`
 * Result:</br>
-Unique product IDs found: 19,417
+Unique product IDs found: 19,417 </br>
 📦 Saved: product_ids_to_crawl.csv
 
 * Crawl the product name based on the above information; get **only one active `product name`** for each distinct `product_id`.
 * Result: </br>
-🎉 Validation complete!
-✔ Valid IDs: 14,445
-✖ Invalid IDs: 4,972
-💾 Saving valid IDs to valid_product_ids.csv...
-📦 Saved: valid_product_ids.csv
-✅ All done!
+🎉 Validation complete! </br>
+✔ Valid IDs: 14,445 </br>
+✖ Invalid IDs: 4,972 </br>
+💾 Saving valid IDs to valid_product_ids.csv... </br>
+📦 Saved: valid_product_ids.csv </br>
+✅ All done! </br>
