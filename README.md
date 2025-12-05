@@ -118,3 +118,35 @@ Check DB + collections
     show collections
 ```
 
+## 7. IP Location Processing
+* Install ip2location-python library
+* Python script: ip_location.py
+* Result:
+📥 Fetching unique IPs via aggregation...
+3239628it [03:59, 13504.83it/s]
+🎉 DONE! Processed 3,239,628 unique IPs. Results saved to CSV + MongoDB collection.
+
+## 8. Product name collection
+* Filter data from collections:
+
+** `view_product_detail`
+** `select_product_option`
+** `select_product_option_quality`
+** `add_to_cart_action`
+** `product_detail_recommendation_visible`
+** `product_detail_recommendation_noticed`
+
+→ Retrieve `product_id` (or `viewing_product_id` if `product_id` is missing) and `current_url`
+
+* Filter data from `product_view_all_recommend_clicked` → Retrieve `viewing_product_id` and `referrer_url`
+* Result:
+Unique product IDs found: 19,417
+📦 Saved: product_ids_to_crawl.csv
+
+* Crawl the product name based on the above information; get **only one active `product name`** for each distinct `product_id`.
+🎉 Validation complete!
+✔ Valid IDs: 14,445
+✖ Invalid IDs: 4,972
+💾 Saving valid IDs to valid_product_ids.csv...
+📦 Saved: valid_product_ids.csv
+✅ All done!
