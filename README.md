@@ -4,6 +4,7 @@
 * Visual Studio Code editor.
 * Python 3.11.
 * Python library: ip2location, requests, BeautifulSoup, pandas, time, concurrent.futures, pymongo, tqdm, csv, os
+* Link to the dataset for this project: https://drive.google.com/drive/folders/1V2_LSDwkKMJn2_fF8UfjKngk3QcIvRdd?usp=sharing
 
 ## 2. Folder structure:  
 <pre>
@@ -12,7 +13,7 @@ PROJECT-05-DATA-COLLECTION-STORAGE
 ├── csv files result/
 │       ├── ip_location_results.csv # IP result 
 │       ├── product_ids_to_crawl.csv # Retrieve product_id and url
-│       ├── product_info.csv # Crawl the product id 
+│       ├── product_info.csv # Crawl the product ID 
 │
 │
 └── src/
