@@ -17,9 +17,9 @@ PROJECT-05-DATA-COLLECTION-STORAGE
 │
 │
 └── src/
-    ├── crawl_data.py # Step 6: Product name collection
-    ├── ip_location.py # Step 5: IP Location Processing
-    └── retrieve_data.py # Step 6: Product name collection
+    ├── crawl_data.py # Product name collection
+    ├── ip_location.py # IP Location Processing
+    └── retrieve_data.py # Product name collection
 
 
 </pre>
@@ -139,7 +139,8 @@ Check DB + collections
 → Retrieve `product_id` (or `viewing_product_id` if `product_id` is missing) and `current_url`
 
 * Filter data from `product_view_all_recommend_clicked` → Retrieve `viewing_product_id` and `referrer_url`
+* Python script: retrieve_data.py
 * Result: More than 19k ids are extracted from summary collection in MongoDB
 
 * Crawl the product name based on the above information; get **only one active `product name`** for each distinct `product_id`.
-* Result: The product_info.csv file in the csv files result folder is extracted and more than 18k product ids are crawled from the glamira website
+* Result: The product_info.csv file in the csv files result folder is extracted and more than 18k product ids are crawled from crawl_data.py script. 
