@@ -138,15 +138,7 @@ Check DB + collections
 → Retrieve `product_id` (or `viewing_product_id` if `product_id` is missing) and `current_url`
 
 * Filter data from `product_view_all_recommend_clicked` → Retrieve `viewing_product_id` and `referrer_url`
-* Result:</br>
-Unique product IDs found: 19,417 </br>
-📦 Saved: product_ids_to_crawl.csv
+* Result: More than 19k ids are extracted from summary collection in MongoDB
 
 * Crawl the product name based on the above information; get **only one active `product name`** for each distinct `product_id`.
-* Result: </br>
-🎉 Validation complete! </br>
-✔ Valid IDs: 14,445 </br>
-✖ Invalid IDs: 4,972 </br>
-💾 Saving valid IDs to valid_product_ids.csv... </br>
-📦 Saved: valid_product_ids.csv </br>
-✅ All done! </br>
+* Result: The product_info.csv file in the csv files result folder is extracted and more than 18k product ids are crawled from the glamira website
